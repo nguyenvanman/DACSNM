@@ -1,6 +1,6 @@
-﻿namespace DeadlineMonotonic
+﻿namespace RTOSScheduling
 {
-    public class ReadyTask
+    class ReadyTask
     {
         public Task Task { get; set; }
 

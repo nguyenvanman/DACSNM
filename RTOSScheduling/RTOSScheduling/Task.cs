@@ -1,6 +1,6 @@
-﻿namespace DeadlineMonotonic
+﻿namespace RTOSScheduling
 {
-    public class Task
+    class Task
     {
         public string Name { get; set; }
         public int Capacity { get; set; }

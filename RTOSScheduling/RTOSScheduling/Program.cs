@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DeadlineMonotonic
+namespace RTOSScheduling
 {
     class Program
     {
@@ -13,8 +13,6 @@ namespace DeadlineMonotonic
         static void Main(string[] args)
         {
             InputTasks();
-
-
             Console.WriteLine();
             Console.WriteLine("\tWCET\tDeadline\tPeriod");
             foreach (var task in Tasks)
@@ -24,6 +22,16 @@ namespace DeadlineMonotonic
 
             Console.WriteLine();
             Console.WriteLine($"CPU Utilization: U = {CalculateUltilization()}");
+
+            Console.WriteLine();
+            Console.WriteLine("Deadline Monotonic");
+            Console.WriteLine();
+            DeadlineMonotonicScheduling();
+
+            Console.WriteLine();
+            Console.WriteLine("Rate Monotonic");
+            Console.WriteLine();
+            RateMonotonicScheduling();
 
             Console.WriteLine();
             Console.WriteLine("Earlier Deadline First");
@@ -185,11 +193,3 @@ namespace DeadlineMonotonic
         }
     }
 }
-
-
-
-
-
-
-
-
